@@ -83,6 +83,7 @@ const Login = () => {
           Don't Have Account? <Link to="/signup">Create Account</Link>
         </p>
       </form>
+      <p style={{color: 'red'}}>You can Create Account or use demo(email: rian.acca@gmail.com,password: 123456) </p>
     </div>
   );
 };
