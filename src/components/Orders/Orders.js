@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
 import { userContext } from "../../App";
 import OrderDetails from "../OrderDetails/OrderDetails";
 
@@ -21,12 +20,12 @@ const Orders = () => {
     const output = matchedProduct.filter((pd) => pd.email === userEmail);
 console.log(output);
     setOrderItems(output);
-  },[]);
+  },[fetch]);
 
   return (
     <div>
     
-      <h2>Your Order Count: {orderItems?.length}</h2>
+      <h2>Your Order Count: {orderItems.length}</h2>
       {orderItems.map((product) => (
         <OrderDetails product={product}></OrderDetails>
       ))}

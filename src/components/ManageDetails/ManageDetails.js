@@ -10,7 +10,7 @@ const ManageDetails = (props) => {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((data) => Redirect('/admin/manageProduct'));
+      .then((data) => Redirect('/'));
   };
 
   return (
