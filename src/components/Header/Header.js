@@ -11,7 +11,7 @@ const Header = () => {
     <div>
       <Navbar bg="primary" variant="dark">
         <Navbar.Brand as={Link} to="/home">
-          Fresh Vally
+          Dhaka Mart
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/home">

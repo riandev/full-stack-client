@@ -7,7 +7,7 @@ const Login = () => {
   const [signInUser,setSignInUser]=useContext(userContext);
   const [password, setPassword] = useState();
 //   useEffect(() => {
-//     fetch("http://localhost:5500/user")
+//     fetch("https://rocky-castle-55025.herokuapp.com/user")
 //       .then((res) => res.json())
 //       .then((data) => console.log(data));
 //   }, []);
@@ -16,7 +16,7 @@ const Login = () => {
   let { from } = location.state || { from: { pathname: "/" } };
 
   const handleLoginMatch = (e) => {
-    fetch("http://localhost:5500/user?email=" + email)
+    fetch("https://rocky-castle-55025.herokuapp.com/user?email=" + email)
     .then((res) => {
       if (res.status === 200) {
         res.json()

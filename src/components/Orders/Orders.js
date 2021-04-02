@@ -13,20 +13,20 @@ const Orders = () => {
   const userEmail = signInUser.email;
 
   useEffect(() => {
-    fetch("http://localhost:5500/order")
+    fetch("https://rocky-castle-55025.herokuapp.com/order")
       .then((res) => res.json())
       .then((data) => {
         setMatchedProduct(data);
       });
     const output = matchedProduct.filter((pd) => pd.email === userEmail);
-    console.log(output);
+console.log(output);
     setOrderItems(output);
   },[]);
 
   return (
     <div>
     
-      <h2>Your Order Count: {orderItems.length}</h2>
+      <h2>Your Order Count: {orderItems?.length}</h2>
       {orderItems.map((product) => (
         <OrderDetails product={product}></OrderDetails>
       ))}

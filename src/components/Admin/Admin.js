@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddProduct from "../AddProduct/AddProduct";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBorderAll,faPlus,faEdit } from '@fortawesome/free-solid-svg-icons'
+import ManageProduct from "../ManageProduct/ManageProduct";
 
 const routes = [
   {
     path: "/admin/manageProduct",
     sidebar: () => <div></div>,
-    main: () => <h2>Manage Product</h2>,
+    main: () => <div>
+      <ManageProduct></ManageProduct>
+    </div>,
   },
   {
     path: "/admin/addProduct",

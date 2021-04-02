@@ -29,7 +29,7 @@ const AddProduct = () => {
       image: pdImage,
     };
     console.log(productss);
-    fetch("http://localhost:5500/product", {
+    fetch("https://rocky-castle-55025.herokuapp.com/product", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(productss),

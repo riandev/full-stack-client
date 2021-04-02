@@ -10,7 +10,7 @@ const Deals = () => {
   const [signInUser,setSignInUser]=useContext(userContext);
   console.log(signInUser);
   useEffect(() => {
-fetch('http://localhost:5500/products')
+fetch('https://rocky-castle-55025.herokuapp.com/products')
 .then(res => res.json())
 .then(data => {
     setAllProducts(data);
@@ -26,7 +26,7 @@ const handleCheckOut = () => {
         email:signInUser.email
     }
     console.log(checkedOutProduct);
-    fetch('http://localhost:5500/buyProduct',{
+    fetch('https://rocky-castle-55025.herokuapp.com/buyProduct',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(checkedOutProduct)
@@ -57,7 +57,7 @@ const handleCheckOut = () => {
           </tr>
         </tbody>
       </Table>
-      <button onClick={handleCheckOut} className='btn btn-primary'>CheckOut</button>
+      <button onClick={handleCheckOut} className='btn btn-primary container ml-5 pl-5'>CheckOut</button>
       {checkOutStatus === true && alert('Checkout Successfull')}
     </div>
   );
